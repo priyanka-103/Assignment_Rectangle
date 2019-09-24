@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Assignment1_rectangle
+namespace Assignment1
 {
-    class Rectangle
+    public class Rectangle
     {
         private int length;
         private int width;
@@ -42,7 +42,7 @@ namespace Assignment1_rectangle
         public int SetWidth(int width)
         {
             this.width = width;
-            return this.width; 
+            return this.width;
         }
 
         public int GetPerimeter()

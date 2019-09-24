@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment1_rectangle
+namespace Assignment1
 {
     class Program
     {
@@ -12,29 +12,30 @@ namespace Assignment1_rectangle
         {
             Program p = new Program();
             p.Go();
-            
-
         }
 
         void Go()
         {
-            Rectangle r = new Rectangle();
 
+            Rectangle r;
             int menu1 = ValidateMenu1Selection();
             if (menu1 == 2)
             {
-                r.SetLength(ValidateUserInput("length"));
-                r.SetWidth(ValidateUserInput("width"));
+                r = new Rectangle((ValidateUserInput("length")), (ValidateUserInput("width")));
 
+            }
+            else
+            {
+                r = new Rectangle();
             }
 
             bool keepGoing = true;
-            
+
             while (keepGoing == true)
             {
 
                 int menu = ValidateMenuSelection();
-                
+
                 switch (menu)
                 {
                     case 1:
@@ -138,7 +139,7 @@ namespace Assignment1_rectangle
             int number = 1;
             bool isValid = false;
 
-            while(isValid==false)
+            while (isValid == false)
             {
                 Console.Write($"Please enter the {rectSide} of your rectangle as an integer within 1-100: ");
                 string userInput = Console.ReadLine();
@@ -168,5 +169,5 @@ namespace Assignment1_rectangle
         }
     }
 
-   
+
 }
